@@ -22,3 +22,9 @@ The system uses in-memory or file-based persistence and avoids external services
 - Validation of order state transitions
 - In-memory or file-based data storage
 - Clean separation of business rules and logic
+
+- ---
+
+## 📁 Project Structure
+
+Order-Management-System/ ├─ src/                     # Source code (Node.js files) │  ├─ controllers/          # Request handlers │  ├─ services/             # Business logic / domain rules │  ├─ models/               # Order, Courier models │  ├─ utils/                # Helper functions │  └─ index.js              # Entry point ├─ database/                # In-memory or file-based data storage ├─ README.md                # Project documentation ├─ .gitignore               # Files to ignore in Git └─ package.json             # Project dependencies
