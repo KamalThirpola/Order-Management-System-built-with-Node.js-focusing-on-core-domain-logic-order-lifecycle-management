@@ -12,3 +12,13 @@ The system uses in-memory or file-based persistence and avoids external services
 - **Database:** In-memory or file-based persistence
 - **External Services:** No external APIs, queues, or managed services
 - **Focus:** Core domain logic and business rules (deployment out of scope)
+
+- ---
+
+## ✨ Features
+
+- Create and manage orders
+- Strict order lifecycle management
+- Validation of order state transitions
+- In-memory or file-based data storage
+- Clean separation of business rules and logic
