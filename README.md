@@ -38,5 +38,19 @@ Order-Management-System/ ├─ src/                     # Source code (Node.js 
    ```bash
    git clone https://github.com/KamalThirpola/order-management-system.git
    cd order-management-system
+3. Install dependecies
+   '''bash
    npm install
+4. Start the application
+   '''bash
    npm start
+5. Open your browser or Postman to test the API endpoints (default port: 3000)
+   Sample API Endpoints
+   Method Endpoint   Description
+   POST  /orders     Create a new order
+   GET   /orders     Get list of all orders
+   GET   /orders/:id Get details of a specific order
+   PUT   /orders/:id/status Update order status
+   GET   /couriers Get list of available couriers
+   POST  /couriers/assign/:id  Assign courier to an order
+   All endpoints use JSON format for requests and responses.
