@@ -54,3 +54,22 @@ Order-Management-System/ ├─ src/                     # Source code (Node.js 
    GET   /couriers Get list of available couriers
    POST  /couriers/assign/:id  Assign courier to an order
    All endpoints use JSON format for requests and responses.
+Topics
+nodejs
+nestjs
+express
+order-management
+backend
+system-design
+domain-logic
+in-memory-database
+rest-api
+logistics
+Line
+Order Management System | Node.js, NestJS/Express
+- Developed a domain-driven order management system with strict order lifecycle validation.
+- Implemented in-memory persistence and courier assignment logic.
+- GitHub: https://github.com/KamalThirpola/order-management-system
+
+“I built an Order Management System in Node.js focusing on domain logic, order lifecycle management, and in-memory persistence. The project is on my GitHub.”
+ 
