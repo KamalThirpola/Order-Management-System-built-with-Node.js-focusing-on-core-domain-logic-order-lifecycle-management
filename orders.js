@@ -1,28 +1,33 @@
-// orders.js
+ order.status = "ASSIGNED";
 
-const { orders } = require("./data");
-
-function createOrder(order) {
-  orders.push({
-    ...order,
-    status: "CREATED",
-  });
   return order;
 }
 
-function updateOrderStatus(orderId, newStatus) {
-  const order = orders.find(o => o.id === orderId);
+// Update order status
+function updateStatus(orderId, newStatus) {
+  const order = data.orders.find(o => o.id === orderId);
+  if (!order) throw new Error("Order not found");
 
-  if (!order) {
-    throw new Error("Order not found");
-  }
+  const currentIndex = ORDER_STATES.indexOf(order.status);
+  const nextIndex = ORDER_STATES.indexOf(newStatus);
+
+  if (nextIndex === -1 || nextIndex !== currentIndex + 1)
+    throw new Error("Invalid state transition");
 
   order.status = newStatus;
   return order;
 }
 
+// Get all orders
+function getOrders() {
+  return data.orders;
+}
+
 module.exports = {
   createOrder,
-  updateOrderStatus,
+  assignOrder,
+  updateStatus,
+  getOrders
 };
+
 
