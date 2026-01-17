@@ -1,7 +1,8 @@
-// Add a courier
+const data = require("./data");
+
 function addCourier(name) {
   const courier = {
-    id: data.couriers.length + 1,
+    id: Date.now(),
     name,
     available: true
   };
@@ -10,22 +11,29 @@ function addCourier(name) {
   return courier;
 }
 
-// Get all couriers
-function getCouriers() {
-  return data.couriers;
-}
+function assignCourier(orderId, courierId) {
+  const order = data.orders.find(o => o.id === orderId);
+  const courier = data.couriers.find(c => c.id === courierId);
 
-// Assign courier
-function assignCourier() {
-  const courier = data.couriers.find(c => c.available);
-  if (!courier) return null;
+  if (!order || !courier) {
+    throw new Error("Order or Courier not found");
+  }
 
+  if (!courier.available) {
+    throw new Error("Courier already assigned");
+  }
+
+  order.courierId = courierId;
+  order.status = "ASSIGNED";
   courier.available = false;
-  return courier;
+
+  return order;
 }
 
 module.exports = {
   addCourier,
-  getCouriers,
+  assignCourier
+};
+
 
 
