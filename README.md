@@ -37,7 +37,6 @@ Order-Management-System/ ├─ src/                     # Source code (Node.js 
 2. Clone the repository:
    ```bash
    git clone https:https://github.com/KamalThirpola/Order-Management-System-built-with-Node.js-focusing-on-core-domain-logic-order-lifecycle-management
-   cd order-management-syste
 3. Install dependecies
    '''bash
    npm install
